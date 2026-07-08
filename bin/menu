@@ -1,0 +1,70 @@
+#!/bin/sh
+
+ROOT=sudo
+
+# Open terminal with command
+term() {
+    title=$1
+    shift
+    xterm -geometry 120x30 -T "$title" -e "$@"
+}
+
+#term() {
+#    st -t "$1" -e "${@:2}"
+#}
+
+termbig() {
+    title=$1
+    shift
+    xterm -maximized -T "$title" -e "$@"
+}
+
+#termbig() {
+#    st -g 140x40 -t "$1" -e "${@:2}"
+#}
+
+termtab() {
+    tabbed -c -n termtab -r 2 xterm -into '' -e tmux
+}
+
+#termtab() {
+#    tabbed -c -n termtab -r 2 st -w '' -e tmux
+#}
+
+choice=$(printf "%s\n" \
+     "browser" \
+     "terminal" \
+     "termtab"  \
+     "irc" \
+     "feed" \
+     "scratch" \
+     "mail" \
+     "pdf" \
+     "editor" \
+     "files" \
+     "mixer" \
+     "wifi" \
+     "bluetooth" \
+     "htop" \
+     "reboot" \
+     "shutdown" |
+     dmenu -i -l 14 -p "Menu")
+
+case "$choice" in
+     ( browser)    firefox ;;
+     ( terminal)   term terminal tmux ;;
+     ( termtab)    termtab ;;
+     ( irc)        termbig senpai senpai ;;
+     ( feed)       term feed sfeed_curses "$HOME"/.sfeed/feeds/* ;;
+     ( scratch)    term scratch ~/.bin/scratch ;;
+     ( mail)       termbig mutt mutt ;;
+     ( pdf)        pdf-open.sh ;;
+     ( editor)     geany ;;
+     ( files)      termbig dfm dfm ;;
+     ( mixer)      pavucontrol ;;
+     ( wifi)       term wifitui "$ROOT" wifitui ;;
+     ( htop)       termbig htop htop ;;
+     ( bluetooth)  blueman-manager ;;
+     ( reboot)     "$ROOT" /sbin/reboot ;;
+     (shutdown)   "$ROOT" /sbin/poweroff ;;
+esac
