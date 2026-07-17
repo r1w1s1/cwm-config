@@ -51,20 +51,20 @@ choice=$(printf "%s\n" \
      dmenu -i -l 14 -p "Menu")
 
 case "$choice" in
-     ( browser)    firefox ;;
-     ( terminal)   term terminal tmux ;;
-     ( termtab)    termtab ;;
-     ( irc)        termbig senpai senpai ;;
-     ( feed)       term feed sfeed_curses "$HOME"/.sfeed/feeds/* ;;
-     ( scratch)    term scratch ~/.bin/scratch ;;
-     ( mail)       termbig mutt mutt ;;
-     ( pdf)        pdf-open.sh ;;
-     ( editor)     geany ;;
-     ( files)      termbig dfm dfm ;;
-     ( mixer)      pavucontrol ;;
-     ( wifi)       term wifitui "$ROOT" wifitui ;;
-     ( htop)       termbig htop htop ;;
-     ( bluetooth)  blueman-manager ;;
-     ( reboot)     "$ROOT" /sbin/reboot ;;
+     (browser)    firefox ;;
+     (terminal)   term terminal tmux ;;
+     (termtab)    termtab ;;
+     (irc)        termbig senpai senpai ;;
+     (feed)       term feed sfeed_curses "$HOME"/.sfeed/feeds/* ;;
+     (scratch)    term scratch ~/.bin/scratch ;;
+     (mail)       termbig mutt mutt ;;
+     (pdf)        pdf-open.sh ;;
+     (editor)     geany ;;
+     (files)      termbig dfm dfm ;;
+     (mixer)      pavucontrol ;;
+     (wifi)       term wifitui "$ROOT" wifitui ;;
+     (htop)       termbig htop htop ;;
+     (bluetooth)  blueman-manager ;;
+     (reboot)     "$ROOT" /sbin/reboot ;;
      (shutdown)   "$ROOT" /sbin/poweroff ;;
 esac

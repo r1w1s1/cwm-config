@@ -6,4 +6,4 @@ xautolock -time 10 -locker "slock" -detectsleep &
 setxkbmap br thinkpad &
 sxhkd &
 xhidecursor &
-dash $HOME/.bin/root-daynight.sh &
+dash "$HOME/.bin/root-daynight.sh" &
