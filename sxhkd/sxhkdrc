@@ -1,0 +1,54 @@
+#
+# sxhkdrc
+# global keybindings (WM-agnostic)
+#
+
+# --- Audio (PipeWire via pactl) ---
+XF86AudioRaiseVolume
+    pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+XF86AudioLowerVolume
+    pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+XF86AudioMute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+XF86AudioMicMute
+    $HOME/.bin/toggle-call-audio.sh
+
+
+# --- Brightness ---
+XF86MonBrightnessDown
+    brightnessctl set 10%-
+
+XF86MonBrightnessUp
+    brightnessctl set +10%
+
+
+# --- Screen Lock ---
+super + l
+   slock
+
+super + shift + l
+   slock
+
+F12
+   slock
+
+
+# --- Launcher ---
+super + p
+    $HOME/.bin/dmenu_run.sh
+
+
+# --- Screenshot ---
+Print
+    $HOME/.bin/screenshot-full.sh
+
+# Select area
+super + Print
+    $HOME/.bin/screenshot-area.sh
+
+# Menu
+super + space
+    $HOME/.bin/menu
