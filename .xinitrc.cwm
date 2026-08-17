@@ -23,8 +23,5 @@ fi
 # User helpers
 . "$HOME/.xinitrc.common"
 
-# Small system monitor in the top-right corner.
-#xosview -xrm "xosview*geometry: -0+0" -xrm "xosview*title: xosview" &
-
 # Start the window manager
 exec /usr/bin/cwm

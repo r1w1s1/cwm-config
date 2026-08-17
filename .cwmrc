@@ -1,5 +1,5 @@
 # Appearance, adapted from the dwm config.
-fontname "Iosevka Term:size=11:antialias=true"
+fontname "Ttyp0 OTB:size=14"
 
 borderwidth 1
 snapdist 32
@@ -12,16 +12,33 @@ color font "#cccccc"
 color selfont "#1c1c1c"
 
 # Applications.
-command term "tabbed -c -n termtab -r 2 st -w '' -e tmux"
+command termtab "tabbed -c -n termtab -r 2 st -w '' -e tmux"
 command firefox "firefox"
+
+# Keep system-wide shortcuts in cwm so they share one keyboard grab.
+# This avoids handing global keys to a second daemon and keeps media,
+# launcher, screenshot, lock, and menu actions consistent after windows close.
+bind-key XF86AudioRaiseVolume "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+bind-key XF86AudioLowerVolume "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+bind-key XF86AudioMute "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+bind-key XF86AudioMicMute "/home/r1w1s1/.bin/toggle-call-audio.sh"
+bind-key XF86MonBrightnessDown "brightnessctl set 10%-"
+bind-key XF86MonBrightnessUp "brightnessctl set +10%"
+
+bind-key 4-l "xscreensaver-command -lock"
+bind-key 4S-l "xscreensaver-command -lock"
+bind-key F12 "xscreensaver-command -lock"
+bind-key 4-p "/home/r1w1s1/.bin/dmenu_run.sh"
+bind-key Print "/home/r1w1s1/.bin/screenshot-full.sh"
+bind-key 4-Print "/home/r1w1s1/.bin/screenshot-area.sh"
+bind-key 4-space "/home/r1w1s1/.bin/menu"
 
 # Use cwm groups like dwm tags/workspaces.
 sticky yes
 autogroup 1 firefox
-ignore xosview
 
 # Main bindings, using Super/Mod4 like the dwm config.
-bind-key 4S-Return terminal
+bind-key 4S-Return /home/r1w1s1/.bin/cwm-terminal
 bind-key 4-j window-cycle
 bind-key 4-k window-rcycle
 bind-key 4-c window-close
