@@ -75,6 +75,10 @@ More background:
 - [Developer blog: jasper@: cwm in Xenocara](https://undeadly.org/cgi?action=article;sid=20070712103624) - historical CWM context from the OpenBSD Journal (2007), including its keyboard-driven and deliberately lightweight character.
 - [Getting started with cwm](https://undeadly.org/cgi?action=article;sid=20090502141551) - practical background on groups, `sticky`, `autogroup`, and keyboard-driven configuration.
 - [cwm, just right](https://williamjansson.com/posts/cwm/) - a recent personal perspective on CWM's small size, stacking model, and low cognitive load.
+- [pguerin3/cwmrc](https://github.com/pguerin3/cwmrc) - extensive CWM configuration and workflow examples.
+- [OpenBSD's CWM: An Underrated Window Manager (Plus a Comfy Config)](https://ianlecorbeau.com/blog/openbsd-cwm.html) - practical overview of CWM groups, bindings, menus, appearance, `sticky`, `autogroup`, and manual `htile`/`vtile`, with a substantial commented `.cwmrc`. [Archived copy](https://web.archive.org/web/20260818163633/https://ianlecorbeau.com/blog/openbsd-cwm.html).
+- [OpenBSD: cwm](https://astro-gr.org/openbsd-cwm/) - a detailed OpenBSD setup organized around groups, `sticky`, `autogroup`, application bindings, and small helper scripts. [Archived copy](https://web.archive.org/web/20260818163545/https://astro-gr.org/openbsd-cwm/).
+- [cwm](https://nein.triapul.cz/cwm) - concise workflow notes for desktop switching, moving windows between groups, window menus, and basic horizontal or vertical tiling. [Archived copy](https://web.archive.org/web/20260818163944/https://nein.triapul.cz/cwm).
 
 ## Files
 
