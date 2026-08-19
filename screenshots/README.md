@@ -1,36 +1,37 @@
 # CWM Desktop Showcase
 
-Curated cwm desktops. Each image links to its original Reddit post; this
-repository does not claim ownership of third-party screenshots.
+Curated CWM desktops for ideas and inspiration. Each image links to its
+original Reddit post; this repository does not claim ownership of third-party
+screenshots.
 
 ## CWM: Cyberbird
 
-![cwm screenshot](reddit/debian-cyberbird.png)
+![CWM screenshot: Cyberbird](reddit/debian-cyberbird.png)
 
 [Original Reddit post](https://www.reddit.com/r/unixporn/comments/1pxj870/cwm_cyberbird/)
 
 ## CWM: My Genera inspired Unix machine
 
-![cwm screenshot](reddit/alpine-xzwordfeudzx.png)
+![CWM screenshot: My Genera inspired Unix machine](reddit/alpine-xzwordfeudzx.png)
 
 **Author:** u/XzwordfeudzX
 [Original Reddit post](https://www.reddit.com/r/unixporn/comments/1duewg1/cwm_my_genera_inspired_unix_machine/)
 
 ## CWM: My quiet space
 
-![cwm screenshot](reddit/netbsd-quiet-space.png)
+![CWM screenshot: My quiet space](reddit/netbsd-quiet-space.png)
 
 [Original Reddit post](https://www.reddit.com/r/unixporn/comments/1krt7hz/cwm_my_quiet_space/)
 
 ## CWM: ThinkPad endgame
 
-![cwm screenshot](reddit/thinkpad-cwm.png)
+![CWM screenshot: ThinkPad endgame](reddit/thinkpad-cwm.png)
 
 [Original Reddit post](https://www.reddit.com/r/unixporn/comments/1tgkunw/cwm_thinkpad_endgame/)
 
 ## CWM: OpenBSD simple, practical
 
-![cwm screenshot](reddit/openbsd-simple-practical.png)
+![CWM screenshot: OpenBSD simple, practical](reddit/openbsd-simple-practical.png)
 
 The author identifies the setup as OpenBSD 7.7 with `cwm`, `irssi`, Siren, Vim,
 Firefox, `ytree`, and `lemonbar-xft`.
@@ -39,7 +40,7 @@ Firefox, `ytree`, and `lemonbar-xft`.
 
 ## CWM: Astigmatism friendly
 
-![cwm screenshot](reddit/debian-astigmatism-friendly.png)
+![CWM screenshot: Astigmatism friendly](reddit/debian-astigmatism-friendly.png)
 
 The screenshot shows Debian GNU/Linux, CWM, and a high-contrast desktop layout.
 

@@ -1,9 +1,15 @@
-# cwm configurations, workflows and desktop showcase
+# Calm Window Manager (CWM) configuration, workflows and desktop showcase
 
-My minimal CWM setup for Slackware Linux, along with a small, curated showcase
-of real-world CWM desktops.
+My minimal Calm Window Manager (CWM) setup for Slackware Linux, along with a
+small, curated showcase of real-world CWM desktops. The daily setup runs on
+Slackware, but the CWM configuration and workflow ideas can be adapted to
+other X11 systems.
 
 This repository is the practical showcase of [Window Manager Agnostic Workflows](https://github.com/r1w1s1/code-notes/blob/main/notes/Window_Manager_Agnostic_Workflows.txt). It is the keyboard-driven X11 desktop I use day to day, built around CWM, dmenu-style helpers, and small shell scripts. CWM handles window management and the global keyboard workflow.
+
+CWM is a lightweight X11 window manager with floating windows, groups, and
+optional tiling commands. This repository shows those features in a real daily
+configuration rather than providing a turnkey installation.
 
 ![CWM desktop screenshot](cwm.png)
 
@@ -21,14 +27,14 @@ startx
   |     +-- start the DBus session bus
   |     +-- source .xinitrc.common
   |     |     |
-   |     |     +-- optional screen saver / DPMS
-   |     |     +-- keyboard layout
-   |     |     +-- xhidecursor
-   |     |     +-- wallpaper
-   |     |
-   |     +-- exec cwm --------------- window management
-   |
-   +-- CWM and shell helpers provide the desktop workflow
+  |     |     +-- optional screen saver / DPMS
+  |     |     +-- keyboard layout
+  |     |     +-- xhidecursor
+  |     |     +-- wallpaper
+  |     |
+  |     +-- exec cwm --------------- window management
+  |
+  +-- CWM and shell helpers provide the desktop workflow
 ```
 
 ## Idea
@@ -60,12 +66,14 @@ repository does not claim ownership of those images.
 
 ### Preview
 
+<div>
 <a href="screenshots/README.md#cwm-cyberbird"><img src="screenshots/reddit/debian-cyberbird.png" alt="CWM: Cyberbird" width="220"></a>
 <a href="screenshots/README.md#cwm-my-genera-inspired-unix-machine"><img src="screenshots/reddit/alpine-xzwordfeudzx.png" alt="CWM: My Genera inspired Unix machine" width="220"></a>
-<a href="screenshots/README.md#cwm-my-quiet-space"><img src="screenshots/reddit/netbsd-quiet-space.png" alt="CWM: My quiet space" width="220"></a>
+<a href="screenshots/README.md#cwm-my-quiet-space"><img src="screenshots/reddit/netbsd-quiet-space.png" alt="CWM: My quiet space" width="220"></a><br>
 <a href="screenshots/README.md#cwm-thinkpad-endgame"><img src="screenshots/reddit/thinkpad-cwm.png" alt="CWM: ThinkPad endgame" width="220"></a>
 <a href="screenshots/README.md#cwm-openbsd-simple-practical"><img src="screenshots/reddit/openbsd-simple-practical.png" alt="CWM: OpenBSD simple, practical" width="220"></a>
 <a href="screenshots/README.md#cwm-astigmatism-friendly"><img src="screenshots/reddit/debian-astigmatism-friendly.png" alt="CWM: Astigmatism friendly" width="220"></a>
+</div>
 
 ## Resources
 
@@ -83,6 +91,7 @@ More background:
 ## Files
 
 - [`.cwmrc`](.cwmrc) - CWM appearance, groups, mouse bindings, and WM-specific keybindings.
+- [`examples/cwmrc`](examples/cwmrc) - small, commented reference configuration for creating your own `.cwmrc`.
 - [`.xinitrc.cwm`](.xinitrc.cwm) - X session entrypoint for CWM.
 - [`.xinitrc.common`](.xinitrc.common) - shared X session helpers used before starting the WM.
 - [`bin/dmenu_run.sh`](bin/dmenu_run.sh) - styled `dmenu_run` launcher wrapper.
@@ -92,12 +101,29 @@ More background:
 - [`bin/toggle-call-audio.sh`](bin/toggle-call-audio.sh) - personal PipeWire/Bluetooth audio toggle.
 - [`cwm.png`](cwm.png) - screenshot of the setup.
 - [`screenshots/`](screenshots/) - curated CWM desktop showcase.
+- [`cwm-quickref.md`](cwm-quickref.md) - concise day-to-day CWM quick reference.
+
+## Quick Reference
+
+The [CWM Quick Reference](cwm-quickref.md) covers common day-to-day bindings,
+groups, `autogroup`, movement, resizing, and configuration.
 
 ## .cwmrc
 
 The [`.cwmrc`](.cwmrc) contains the complete CWM configuration, including
-appearance, window management, groups, and the system-wide keyboard shortcuts
-for the current setup.
+appearance, window management, groups, and the keyboard shortcuts for the
+current X session. The [`examples/cwmrc`](examples/cwmrc) file is a more
+generic, commented starting point for creating your own configuration. A few
+of the practical CWM features used here are:
+
+- `sticky yes` makes new windows inherit the currently selected group.
+- `autogroup 1 firefox` places Firefox windows in group 1 automatically.
+- `group-only-N` switches to one group, while `window-movetogroup-N` moves the
+  current window to a group.
+- `window-vtile` and `window-htile` provide simple vertical and horizontal
+  tiling when needed.
+- `bind-key` and `bind-mouse` connect keyboard and mouse actions to CWM
+  commands or shell helpers.
 
 ## Dependencies
 
@@ -116,6 +142,7 @@ Bluetooth support for `toggle-call-audio.sh` additionally requires
 This is not a full desktop environment or a turnkey installer. It is the daily
 configuration of `r1w1s1` and a reference implementation of a modular CWM/X11
 workflow. It can be copied selectively or adapted into another portable X11
-workflow.
+workflow. Some entries use personal paths, hardware-specific audio names, or
+commands that are not included in this repository.
 
 Some paths, hardware names, and personal commands need adjustment before use.
