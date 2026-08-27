@@ -42,6 +42,9 @@ CMS-q        quit CWM
 
 Groups can be used as lightweight virtual desktops. Windows may belong to one
 or more groups, and `sticky yes` makes new windows inherit the current group.
+Unlike traditional virtual desktops, groups represent window visibility and
+membership rather than separate independent screens. This distinction matters
+when a window is assigned to more than one group or made sticky.
 
 ```text
 CM-1 ... CM-9     toggle group visibility
@@ -135,6 +138,20 @@ workflow. These bindings are examples, not CWM defaults:
 
 See the [real `.cwmrc`](.cwmrc) and the [generic example](examples/cwmrc) for
 complete configurations.
+
+## Multiple Monitors
+
+Configure monitor geometry before starting CWM, normally in the shared X
+session file:
+
+```sh
+xrandr --output HDMI-1 --primary --mode 1920x1080 \
+       --output DP-1 --mode 1280x1024 --right-of HDMI-1
+```
+
+Use `xrandr` without arguments to find the actual output names and available
+modes. CWM then manages the resulting X11 screen layout; it does not replace
+`xrandr` as the display-layout tool.
 
 ## Further Reading
 

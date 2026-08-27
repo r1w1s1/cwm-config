@@ -87,6 +87,7 @@ More background:
 - [OpenBSD's CWM: An Underrated Window Manager (Plus a Comfy Config)](https://ianlecorbeau.com/blog/openbsd-cwm.html) - practical overview of CWM groups, bindings, menus, appearance, `sticky`, `autogroup`, and manual `htile`/`vtile`, with a substantial commented `.cwmrc`. [Archived copy](https://web.archive.org/web/20260818163633/https://ianlecorbeau.com/blog/openbsd-cwm.html).
 - [OpenBSD: cwm](https://astro-gr.org/openbsd-cwm/) - a detailed OpenBSD setup organized around groups, `sticky`, `autogroup`, application bindings, and small helper scripts. [Archived copy](https://web.archive.org/web/20260818163545/https://astro-gr.org/openbsd-cwm/).
 - [cwm](https://nein.triapul.cz/cwm) - concise workflow notes for desktop switching, moving windows between groups, window menus, and basic horizontal or vertical tiling. [Archived copy](https://web.archive.org/web/20260818163944/https://nein.triapul.cz/cwm).
+- [FreeBSD Forums: Screenshots of BSD Window Managers for X11](https://forums.freebsd.org/threads/screenshots-of-bsd-window-managers-for-x11-nonviral-licenses.81505/) - practical screenshots and notes about CWM, CTWM, TWM, MCWM, FSWM, multiple monitors, `xrandr`, and X11 session startup.
 
 ## Files
 
@@ -106,7 +107,9 @@ More background:
 ## Quick Reference
 
 The [CWM Quick Reference](cwm-quickref.md) covers common day-to-day bindings,
-groups, `autogroup`, movement, resizing, and configuration.
+groups, `autogroup`, movement, resizing, configuration, and multiple monitors.
+It is the detailed operational reference; this README keeps only the project
+overview and the rationale behind the setup.
 
 ## .cwmrc
 
