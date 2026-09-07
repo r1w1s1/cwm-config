@@ -11,7 +11,10 @@ CWM is a lightweight X11 window manager with floating windows, groups, and
 optional tiling commands. This repository shows those features in a real daily
 configuration rather than providing a turnkey installation.
 
-![CWM desktop screenshot](cwm.png)
+![CWM desktop screenshot](kamekura-teal.png)
+
+*CWM on Slackware-current, with a #008080 teal wallpaper inspired by the
+geometric graphic design of Yusaku Kamekura.*
 
 ## How It Works
 
@@ -100,7 +103,7 @@ More background:
 - [`bin/screenshot-full.sh`](bin/screenshot-full.sh) - full-screen screenshot helper.
 - [`bin/screenshot-area.sh`](bin/screenshot-area.sh) - selected-area screenshot helper.
 - [`bin/toggle-call-audio.sh`](bin/toggle-call-audio.sh) - personal PipeWire/Bluetooth audio toggle.
-- [`cwm.png`](cwm.png) - screenshot of the setup.
+- [`kamekura-teal.png`](kamekura-teal.png) - screenshot of the CWM setup.
 - [`screenshots/`](screenshots/) - curated CWM desktop showcase.
 - [`cwm-quickref.md`](cwm-quickref.md) - concise day-to-day CWM quick reference.
 
