@@ -5,7 +5,7 @@ small, curated showcase of real-world CWM desktops. The daily setup runs on
 Slackware, but the CWM configuration and workflow ideas can be adapted to
 other X11 systems.
 
-This repository is the practical showcase of [Window Manager Agnostic Workflows](https://github.com/r1w1s1/code-notes/blob/main/notes/Window_Manager_Agnostic_Workflows.txt). It is the keyboard-driven X11 desktop I use day to day, built around CWM, dmenu-style helpers, and small shell scripts. CWM handles window management and the global keyboard workflow.
+This repository is the practical showcase of [Window Manager Agnostic Workflows](https://github.com/r1w1s1/code-notes/blob/main/notes/Window_Manager_Agnostic_Workflows.txt). It is the keyboard-driven X11 desktop I use day to day, built around CWM and small shell scripts. CWM handles window management, searchable application launching, and the global keyboard workflow.
 
 CWM is a lightweight X11 window manager with floating windows, groups, and
 optional tiling commands. This repository shows those features in a real daily
@@ -98,8 +98,6 @@ More background:
 - [`examples/cwmrc`](examples/cwmrc) - small, commented reference configuration for creating your own `.cwmrc`.
 - [`.xinitrc.cwm`](.xinitrc.cwm) - X session entrypoint for CWM.
 - [`.xinitrc.common`](.xinitrc.common) - shared X session helpers used before starting the WM.
-- [`bin/dmenu_run.sh`](bin/dmenu_run.sh) - styled `dmenu_run` launcher wrapper.
-- [`bin/menu`](bin/menu) - small dmenu-based desktop menu.
 - [`bin/screenshot-full.sh`](bin/screenshot-full.sh) - full-screen screenshot helper.
 - [`bin/screenshot-area.sh`](bin/screenshot-area.sh) - selected-area screenshot helper.
 - [`bin/toggle-call-audio.sh`](bin/toggle-call-audio.sh) - personal PipeWire/Bluetooth audio toggle.
@@ -134,11 +132,11 @@ of the practical CWM features used here are:
 ## Dependencies
 
 - Core: CWM, X11, and `startx`.
-- Workflow: `dmenu`, `st`, `tabbed`, and `tmux`.
+- Workflow: `st`, `tabbed`, and `tmux`.
 - Session helpers: `setxkbmap` and `xhidecursor`.
 - Optional screen saver: `xscreensaver`, `xscreensaver-command`, and `xset` for display power management.
 - Desktop helpers: ImageMagick `import`, `brightnessctl`, and PipeWire `pactl`.
-- [uw-ttyp0](https://slackbuilds.org/repository/15.0/system/uw-ttyp0/) - provides the Ttyp0 font used by CWM and dmenu.
+- [uw-ttyp0](https://slackbuilds.org/repository/15.0/system/uw-ttyp0/) - provides the Ttyp0 font used by CWM.
 
 Bluetooth support for `toggle-call-audio.sh` additionally requires
 `bluetoothctl` and matching local PipeWire device names.

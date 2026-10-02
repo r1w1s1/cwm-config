@@ -11,7 +11,7 @@ color menufg "#cccccc"
 color font "#cccccc"
 color selfont "#1c1c1c"
 
-# Applications.
+# Applications shown by CWM's searchable application menu.
 command termtab "tabbed -c -n termtab -r 2 st -w '' -e tmux"
 command firefox "firefox"
 
@@ -28,10 +28,13 @@ bind-key XF86MonBrightnessUp "brightnessctl set +10%"
 bind-key 4-l "xscreensaver-command -lock"
 bind-key 4S-l "xscreensaver-command -lock"
 bind-key F12 "xscreensaver-command -lock"
-bind-key 4-p "/home/r1w1s1/.bin/dmenu_run.sh"
+# CWM provides both a searchable command menu and a direct command prompt.
+# menu-cmd searches the commands declared above; menu-exec accepts any
+# executable or command available through the user's PATH.
+bind-key 4-p menu-exec
 bind-key Print "/home/r1w1s1/.bin/screenshot-full.sh"
 bind-key 4-Print "/home/r1w1s1/.bin/screenshot-area.sh"
-bind-key 4-space "/home/r1w1s1/.bin/menu"
+bind-key 4-space menu-cmd
 
 # Use cwm groups like dwm tags/workspaces.
 sticky yes
