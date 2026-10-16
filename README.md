@@ -60,6 +60,40 @@ The configuration is divided into two kinds of behavior:
 This keeps the daily keyboard workflow separate from the window manager. CWM can
 change without requiring the global shortcuts and desktop helpers to be rebuilt.
 
+### CWM's two command menus
+
+CWM provides two related ways to launch programs without a separate `dmenu`
+launcher:
+
+- `menu-cmd` searches the named entries declared with `command` in `.cwmrc`.
+- `menu-exec` opens an execution prompt where a program can be entered
+  directly, including an X11 application that is not registered in `command`.
+
+In this configuration, `Super+Space` opens `menu-cmd` and `Super+p` opens
+`menu-exec`:
+
+```cwmrc
+command terminal "xterm"
+command firefox "firefox"
+
+bind-key 4-space menu-cmd
+bind-key 4-p     menu-exec
+```
+
+This keeps frequently used programs named and searchable while preserving a
+direct path to less frequently used X11 programs. See [`cwmrc(5)`](https://man.openbsd.org/cwmrc)
+for the official definitions of `command`, `menu-cmd`, and `menu-exec`.
+
+The `terminal` entry is a deliberately simple example:
+
+```cwmrc
+command terminal "xterm"
+```
+
+This creates one searchable CWM menu entry that launches the standard `xterm`
+terminal. More elaborate workflows can be added later, but a simple command is
+often the clearest way to understand how `menu-cmd` works.
+
 ## Screenshots
 
 The [screenshots gallery](screenshots/README.md) is a small, manually curated
@@ -132,7 +166,7 @@ of the practical CWM features used here are:
 ## Dependencies
 
 - Core: CWM, X11, and `startx`.
-- Workflow: `st`, `tabbed`, and `tmux`.
+- Workflow: `xterm` and `tmux`.
 - Session helpers: `setxkbmap` and `xhidecursor`.
 - Optional screen saver: `xscreensaver`, `xscreensaver-command`, and `xset` for display power management.
 - Desktop helpers: ImageMagick `import`, `brightnessctl`, and PipeWire `pactl`.

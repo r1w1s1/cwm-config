@@ -14,9 +14,16 @@ color menufg "#cccccc"
 color font "#cccccc"
 color selfont "#1c1c1c"
 
-# Applications shown in CWM's application menu.
+# Applications shown in CWM's application search menu.
+# `menu-cmd` searches these named entries. It does not discover every
+# executable installed on the system.
 command term "xterm"
 command browser "firefox"
+
+# `menu-exec` is the complementary prompt: type a program command directly
+# instead of adding it to this list first.
+bind-key 4-space menu-cmd
+bind-key 4-p menu-exec
 
 # New windows inherit the currently selected group.
 sticky yes

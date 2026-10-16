@@ -109,17 +109,31 @@ The command can also be a longer shell command:
 command top "xterm -e top"
 ```
 
-The application menu is searchable. Type after opening it to narrow the list;
-`Ctrl+A` shows all available entries when the list is initially hidden. CWM can
-also execute a command directly, without registering it first:
+The application menu is searchable. Type after opening it to narrow the list.
+`menu-cmd` searches only the entries declared with `command`; it is not a
+general search of every executable installed on the system.
+
+CWM can also execute a program directly, without registering it first:
 
 ```text
-menu-cmd     search the commands declared with `command`
-menu-exec    type and execute any command available through `$PATH`
+menu-cmd     search the named `command` entries
+menu-exec    type and execute a program directly
 ```
 
-For example, `menu-exec` can launch `xedit`, `geany`, or `xterm -e htop`
-without requiring a separate `dmenu_run` launcher.
+For example, `menu-exec` can launch an installed X11 program such as `xedit`
+or `geany` without requiring a separate `dmenu_run` launcher. If a program is
+used frequently, add a named `command` entry so it remains available in
+`menu-cmd`.
+
+The relevant bindings in the personal configuration are:
+
+```cwmrc
+bind-key 4-space menu-cmd
+bind-key 4-p     menu-exec
+```
+
+See the [`cwmrc(5)`](https://man.openbsd.org/cwmrc) manual for the formal
+definitions of `command`, `menu-cmd`, and `menu-exec`.
 
 ## Configuration
 

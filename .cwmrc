@@ -12,7 +12,7 @@ color font "#cccccc"
 color selfont "#1c1c1c"
 
 # Applications shown by CWM's searchable application menu.
-command termtab "tabbed -c -n termtab -r 2 st -w '' -e tmux"
+command terminal "xterm"
 command firefox "firefox"
 
 # Keep system-wide shortcuts in cwm so they share one keyboard grab.
